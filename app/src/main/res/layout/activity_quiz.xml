@@ -7,6 +7,14 @@
     android:padding="16dp"
     tools:context=".QuizActivity">
 
+    <ImageView
+        android:layout_width="415dp"
+        android:layout_height="847dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:scaleType="center"
+        android:src="@drawable/achtergrond2" />
+
     <TextView
         android:id="@+id/text_view_score"
         android:layout_width="wrap_content"
