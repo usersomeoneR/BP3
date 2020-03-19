@@ -2,6 +2,7 @@ package com.example.bp3;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +24,17 @@ public class MainActivity extends AppCompatActivity {
                 startQuiz();
             }
         });
-    }
+
+
+
+        };
+
 
     private void startQuiz() {
         Intent intent = new Intent(MainActivity.this, QuizActivity.class);
         startActivity(intent);
     }
+
+
+
 }
