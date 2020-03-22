@@ -1,59 +1,80 @@
 package com.example.bp3;
 
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 
-public class QuizActivity extends AppCompatActivity {
-    RadioGroup radio;
-    int count_correct_answer =0;
-    int count_wrong_answer=0;
+public class QuizActivity extends Activity {
+    private RadioGroup radioQuestion2Group,radioQuestion3Group,radioQuestion4Group,radioQuestion5Group,radioQuestion6Group;
+    private RadioButton radioQuestion2Buttom,radioQuestion3Buttom,radioQuestion4Buttom,radioQuestion5Buttom,radioQuestion6Buttom;
+    private Button confirmBT;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-        radio = (RadioGroup) findViewById(R.id.radioGroup2);
 
+        addListenerOnButton();
     }
 
+    public void addListenerOnButton() {
 
-    public void confirmBT(View view) {
-        RadioGroup radio = (RadioGroup) findViewById(R.id.radioGroup2);
+        radioQuestion2Group = (RadioGroup) findViewById(R.id.radioQuestion2);
+        radioQuestion3Group = (RadioGroup) findViewById(R.id.radioQuestion3);
+        radioQuestion4Group = (RadioGroup) findViewById(R.id.radioQuestion4);
+        radioQuestion5Group = (RadioGroup) findViewById(R.id.radioQuestion5);
+        radioQuestion6Group = (RadioGroup) findViewById(R.id.radioQuestion6);
+        confirmBT = (Button) findViewById(R.id.confirmBT);
+
+        confirmBT.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+               int selectedId2 = radioQuestion2Group.getCheckedRadioButtonId();
+               int selectedId3 = radioQuestion3Group.getCheckedRadioButtonId();
+               int selectedId4 = radioQuestion4Group.getCheckedRadioButtonId();
+               int selectedId5 = radioQuestion5Group.getCheckedRadioButtonId();
+               int selectedId6 = radioQuestion6Group.getCheckedRadioButtonId();
+
+
+                radioQuestion2Buttom = (RadioButton) findViewById(selectedId2);
+                radioQuestion3Buttom = (RadioButton) findViewById(selectedId3);
+                radioQuestion4Buttom = (RadioButton) findViewById(selectedId4);
+                radioQuestion5Buttom = (RadioButton) findViewById(selectedId5);
+                radioQuestion6Buttom = (RadioButton) findViewById(selectedId6);
 
 //
-//        // Is the button now checked?
-//        boolean checked = ((RadioButton) view).isChecked();
-//
-//
-//        radioButtonID = radio.getCheckedRadioButtonId();
-//        View radioButton = radio.findViewById(radioButtonID);
-//        if(radioButton.getId() == R.id.radio_button12){
-//            count_correct_answer++;
-//        }
-//        else{
-//            count_wrong_answer++;
-//        }
-//
-//        // Check which radio button was clicked
-//        switch (view.getId()) {
-//            case R.id.RBoptie1:
-//                if (checked)
-//                    break;
-//
-//            case R.id.RBoptie2:
-//                if (checked)
-//                    radio.clearCheck();
-//                break;
-//
-//            case R.id.RBoptie3:
-//                if (checked)
-//                    break;
-//        }
+                Toast.makeText(QuizActivity.this,
+                        radioQuestion2Buttom.getText(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(QuizActivity.this,
+                        radioQuestion3Buttom.getText(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(QuizActivity.this,
+                        radioQuestion4Buttom.getText(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(QuizActivity.this,
+                        radioQuestion5Buttom.getText(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(QuizActivity.this,
+                        radioQuestion6Buttom.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        }
+
+
+
+
+
+
+
+
+
+
+
     }
-}

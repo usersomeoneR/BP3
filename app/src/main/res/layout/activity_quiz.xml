@@ -32,7 +32,7 @@
         app:layout_constraintVertical_bias="0.001" />
 
     <RadioGroup
-        android:id="@+id/radioGroup2"
+        android:id="@+id/radioQuestion2"
         android:layout_width="385dp"
         android:layout_height="36dp"
         android:orientation="horizontal"
@@ -75,7 +75,7 @@
         app:layout_constraintVertical_bias="0.161" />
 
     <RadioGroup
-        android:id="@+id/radioGroup3"
+        android:id="@+id/radioQuestion3"
         android:layout_width="385dp"
         android:layout_height="36dp"
         android:orientation="horizontal"
@@ -120,7 +120,7 @@
         app:layout_constraintVertical_bias="0.336" />
 
     <RadioGroup
-        android:id="@+id/radioGroup4"
+        android:id="@+id/radioQuestion4"
         android:layout_width="385dp"
         android:layout_height="36dp"
         android:orientation="horizontal"
@@ -160,7 +160,7 @@
         app:layout_constraintTop_toTopOf="@+id/textView3" />
 
     <RadioGroup
-        android:id="@+id/radioGroup5"
+        android:id="@+id/radioQuestion5"
         android:layout_width="385dp"
         android:layout_height="36dp"
         android:orientation="horizontal"
@@ -206,7 +206,7 @@
         app:layout_constraintVertical_bias="0.633" />
 
     <RadioGroup
-        android:id="@+id/radioGroup6"
+        android:id="@+id/radioQuestion6"
         android:layout_width="385dp"
         android:layout_height="36dp"
         android:orientation="horizontal"
