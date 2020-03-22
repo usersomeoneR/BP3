@@ -8,6 +8,16 @@
     android:padding="16dp"
     tools:context=".QuizActivity">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:scaleType="center"
+        android:src="@drawable/achtergrond2"
+        tools:layout_editor_absoluteX="-17dp"
+        tools:layout_editor_absoluteY="-14dp" />
+
     <Button
         android:id="@+id/confirmBT"
         android:layout_width="363dp"
@@ -60,6 +70,7 @@
             android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:text="150" />
+
     </RadioGroup>
 
     <TextView
@@ -191,6 +202,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="koestraat 4" />
+
     </RadioGroup>
 
     <TextView
