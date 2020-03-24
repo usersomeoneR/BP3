@@ -2,7 +2,6 @@ package com.example.bp3;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.provider.DocumentsContract;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -30,41 +29,45 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String sUrl = "http://145.48.234.78:8080/WebApp2/webresources/model.smaken";
+        String sUrl = "http://192.168.0.101:8080/WebApplication1/webresources/model.smaken";
         RequestQueue rq = Volley.newRequestQueue(this);
         StringRequest sr = new StringRequest(Request.Method.GET, sUrl, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                System.out.println(response);
                 builtItems(response);
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                System.out.println(error);
             }
         });
         rq.add(sr);
     }
 
-    public void builtItems(String response) {
+    public void builtItems(String response)
+    {
         try {
             Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(new InputSource(new StringReader(response)));
             NodeList data = doc.getElementsByTagName("smakens");
             NodeList alData = data.item(0).getChildNodes();
             ArrayList<String> lijst = new ArrayList<>();
-
-            for (int i = 0; i < alData.getLength(); i++) {
-                Node n = alData.item(i);
-                Node naam = n.getChildNodes().item(1);
-                String s = naam.getTextContent();
-                lijst.add(s);
+            System.out.println(alData.toString());
+            for(int i = 0; i<alData.getLength(); i++){
+                NodeList n = alData.item(i).getChildNodes();
+                for (int j = 0; j < n.getLength(); j++ ){
+                    Node naam = n.item(j);
+                    lijst.add(naam.getTextContent());
+                }
 
             }
             ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, lijst);
             ListView lv = findViewById(R.id.lv);
             lv.setAdapter(adapter);
-        } catch (Exception ex) {
+        }catch(Exception ex){
 
         }
     }
 }
+
