@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".Menuscherm">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="544dp"
+        android:layout_height="786dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hoofdmenu" />
+
     <Button
         android:id="@+id/btnNaarFilmpje"
         android:layout_width="182dp"
@@ -103,4 +114,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.374" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
