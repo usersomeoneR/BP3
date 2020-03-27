@@ -12,5 +12,5 @@ public class Evaluatie extends AppCompatActivity {
         setContentView(R.layout.activity_evaluatie);
     }
 
-    }
+
 }
