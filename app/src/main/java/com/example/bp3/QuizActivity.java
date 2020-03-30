@@ -2,13 +2,21 @@ package com.example.bp3;
 
 
 import android.app.Activity;
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import org.json.JSONTokener;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.sql.SQLOutput;
 
 
 public class QuizActivity extends Activity {
@@ -54,14 +62,45 @@ public class QuizActivity extends Activity {
 //
                 Toast.makeText(QuizActivity.this,
                         radioQuestion2Buttom.getText(), Toast.LENGTH_SHORT).show();
+                String radio2 = String.valueOf(radioQuestion2Buttom.getText());
+                String url2 = "https://adaonboarding.ml/t1/insertQuizAntwoord.php?studentnummer=1234567&antwoord=";
+                url2 += radio2;
+                Log.i("TAG",url2);
+
+
                 Toast.makeText(QuizActivity.this,
                         radioQuestion3Buttom.getText(), Toast.LENGTH_SHORT).show();
+
+                String radio3 = String.valueOf(radioQuestion3Buttom.getText());
+                String url3 = "https://adaonboarding.ml/t1/insertQuizAntwoord.php?studentnummer=1234567&antwoord=" + radio3;
+                Log.i("TAG",url3);
+
                 Toast.makeText(QuizActivity.this,
                         radioQuestion4Buttom.getText(), Toast.LENGTH_SHORT).show();
+                String radio4 = String.valueOf(radioQuestion4Buttom.getText());
+                String url4 = "https://adaonboarding.ml/t1/insertQuizAntwoord.php?studentnummer=1234567&antwoord=" + radio4;
+                Log.i("TAG",url4);
+
                 Toast.makeText(QuizActivity.this,
                         radioQuestion5Buttom.getText(), Toast.LENGTH_SHORT).show();
+                String radio5 = String.valueOf(radioQuestion5Buttom.getText());
+                String url5 = "https://adaonboarding.ml/t1/insertQuizAntwoord.php?studentnummer=1234567&antwoord=" + radio5;
+                Log.i("TAG",url5);
+
                 Toast.makeText(QuizActivity.this,
                         radioQuestion6Buttom.getText(), Toast.LENGTH_SHORT).show();
+                String radio6 = String.valueOf(radioQuestion6Buttom.getText());
+                String url6 = "https://adaonboarding.ml/t1/insertQuizAntwoord.php?studentnummer=1234567&antwoord=" + radio6;
+                Log.i("TAG",url6);
+
+                try {
+                    URL url_g = new URL(url2);
+                    
+                    Log.i("TAG", String.valueOf(url_g));
+                } catch(MalformedURLException e) {
+                    //Do something with the exception.
+                }
+
             }
         });
 
