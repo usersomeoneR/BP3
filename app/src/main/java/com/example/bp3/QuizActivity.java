@@ -12,6 +12,11 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+
+import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import java.net.MalformedURLException;
@@ -19,11 +24,11 @@ import java.net.URL;
 import java.sql.SQLOutput;
 
 
-public class QuizActivity extends Activity {
+public class QuizActivity extends Activity implements Response.Listener<JSONObject>, Response.ErrorListener {
     private RadioGroup radioQuestion2Group,radioQuestion3Group,radioQuestion4Group,radioQuestion5Group,radioQuestion6Group;
     private RadioButton radioQuestion2Buttom,radioQuestion3Buttom,radioQuestion4Buttom,radioQuestion5Buttom,radioQuestion6Buttom;
     private Button confirmBT;
-
+    private VolleyHelper volleyhelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,27 +98,31 @@ public class QuizActivity extends Activity {
                 String url6 = "https://adaonboarding.ml/t1/insertQuizAntwoord.php?studentnummer=1234567&antwoord=" + radio6;
                 Log.i("TAG",url6);
 
-                try {
-                    URL url_g = new URL(url2);
-                    
-                    Log.i("TAG", String.valueOf(url_g));
-                } catch(MalformedURLException e) {
-                    //Do something with the exception.
-                }
+                insertData (radio6,radio5,radio4,radio3,radio2);
 
             }
         });
 
         }
 
+        public void insertData(String radio6, String radio5,String radio4,String radio3,String radio2){
+            volleyhelper = new VolleyHelper(getBaseContext(), "https://adaonboarding.ml/t1/");
+            volleyhelper.get("insertQuizAntwoord.php?studentnummer=1234567&antwoord="+radio6, null, this, this);
+            volleyhelper.get("insertQuizAntwoord.php?studentnummer=1234567&antwoord="+radio5, null, this, this);
+            volleyhelper.get("insertQuizAntwoord.php?studentnummer=1234567&antwoord="+radio4, null, this, this);
+            volleyhelper.get("insertQuizAntwoord.php?studentnummer=1234567&antwoord="+radio3, null, this, this);
+            volleyhelper.get("insertQuizAntwoord.php?studentnummer=1234567&antwoord="+radio2, null, this, this);
 
 
+        }
 
-
-
-
-
-
-
+    @Override
+    public void onErrorResponse(VolleyError error) {
 
     }
+
+    @Override
+    public void onResponse(JSONObject response) {
+
+    }
+}
