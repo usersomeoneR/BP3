@@ -33,8 +33,7 @@
         android:id="@+id/tvWelkomswoord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Beste NAAM, Wat leuk dat jij je hebt aangemeld voor de Associate degrees Academie! Wij hopen dat jij net zo veel zin in het nieuwe schooljaar hebt als wij hebben. In deze app zul je een aantal stappen doorlopen om goed het nieuwe schooljaar te beginnen. Mocht je na het doorlopen van deze stappen nog vragen hebben, kun je deze vragen altijd nog stellen!
-                        "
+        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.588"
