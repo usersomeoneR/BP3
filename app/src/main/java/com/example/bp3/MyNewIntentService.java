@@ -7,10 +7,12 @@ import android.content.Intent;
 
 import androidx.core.app.NotificationManagerCompat;
 
+import com.example.bp3.Model.Notificatie;
+
 //Dit is de Intent Service class.
 public class MyNewIntentService extends IntentService {
     private static final int NOTIFICATION_ID = 3;
-
+    private Notificatie notificatiemodel = new Notificatie();
     public MyNewIntentService() {
         super("MyNewIntentService");
     }
@@ -18,7 +20,8 @@ public class MyNewIntentService extends IntentService {
     @Override
     protected void onHandleIntent(Intent intent) {
         Notification.Builder builder = new Notification.Builder(this);
-        builder.setContentTitle("My Title");
+        String naam = notificatiemodel.getGebruikersnaam();
+        builder.setContentTitle("My Title" + naam);
         builder.setContentText("This is the Body");
         builder.setSmallIcon(R.mipmap.ic_launcher_round);
         Intent notifyIntent = new Intent(this, MainActivity.class);
