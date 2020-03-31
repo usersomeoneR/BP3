@@ -13,6 +13,7 @@ import com.android.volley.VolleyError;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 public class filmpje extends AppCompatActivity implements Response.Listener<JSONObject>, Response.ErrorListener{
 
@@ -22,14 +23,15 @@ public class filmpje extends AppCompatActivity implements Response.Listener<JSON
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filmpje);
         String studentnummer = "1234567";
+        String url = "";
+        String beschrijving = "";
 
         volleyhelper = new VolleyHelper(getBaseContext(), "https://adaonboarding.ml/t1/");
         volleyhelper.get("Studentgegevens.php?studentnummer=" + studentnummer, null, this, this);
+        volleyhelper.get("Filmpje.php?url=" + url, null, this, this);
+        volleyhelper.get("Filmpje.php?beschrijving=" + beschrijving, null, this, this);
 
-        WebView mWebView = findViewById(R.id.wvFilmpje);
-        mWebView.getSettings().setJavaScriptEnabled(true);
-        mWebView.setWebViewClient(new WebViewClient());
-        mWebView.loadUrl("http://www.youtube.com/embed/OUtgotW5T_E");
+
     }
 
     @Override
@@ -40,18 +42,47 @@ public class filmpje extends AppCompatActivity implements Response.Listener<JSON
     @Override
     public void onResponse(JSONObject response) {
 
+        try{
+            JSONArray array = response.getJSONArray("rij");
+            WebView mWebView = findViewById(R.id.wvFilmpje);
+            for (int i = 0; i < array.length(); i++) {
+                JSONObject rij = array.getJSONObject(i);
+                String url = rij.getString("url");
+                mWebView.getSettings().setJavaScriptEnabled(true);
+                mWebView.setWebViewClient(new WebViewClient());
+                mWebView.loadUrl(url);
+            }
+        }
+        catch (JSONException e) {
+            e.printStackTrace();
+        }
+
         try {
             JSONArray array = response.getJSONArray("rij");
             TextView tvWelkomswoord = findViewById(R.id.tvWelkomswoord);
             for (int i = 0; i < array.length(); i++) {
                 JSONObject rij = array.getJSONObject(i);
                 String naam = rij.getString("gebruikersnaam");
-                tvWelkomswoord.setText("Beste " + naam + ", Wat leuk dat jij je hebt aangemeld voor de Associate degrees Academie! Wij hopen dat jij net zo veel zin in het nieuwe schooljaar hebt als wij hebben. In deze app zul je een aantal stappen doorlopen om goed het nieuwe schooljaar te beginnen. Mocht je na het doorlopen van deze stappen nog vragen hebben, kun je deze vragen altijd nog stellen!                         ");
+                tvWelkomswoord.setText("Beste "+ naam + " ");
             }
 
         }
         catch (JSONException e) {
             e.printStackTrace();
         }
+
+        try {
+            JSONArray array = response.getJSONArray("rij");
+            TextView tvWelkomswoord = findViewById(R.id.tvWelkomswoord);
+            for (int i = 0; i < array.length(); i++) {
+                JSONObject rij = array.getJSONObject(i);
+                String beschrijving = rij.getString("beschrijving");
+                tvWelkomswoord.append(beschrijving);
+            }
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }    
     }
 }
