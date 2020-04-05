@@ -24,37 +24,37 @@ public class VolleyHelper {
     }
 
 
-    private String contructUrl(String method){
+    private String contructUrl(String method) {
         return baseUrl + "/" + method;
     }
 
-    public ImageLoader getImageLoader(){
+    public ImageLoader getImageLoader() {
         return imageLoader;
     }
 
     public void get(String method, JSONObject jsonRequest,
-                    Response.Listener<JSONObject> listener, Response.ErrorListener errorListener){
+                    Response.Listener<JSONObject> listener, Response.ErrorListener errorListener) {
 
         JsonObjectRequest objRequest = new JsonObjectRequest(Request.Method.GET, contructUrl(method), jsonRequest, listener, errorListener);
         requestQueue.add(objRequest);
     }
 
     public void put(String method, JSONObject jsonRequest,
-                    Response.Listener<JSONObject> listener, Response.ErrorListener errorListener){
+                    Response.Listener<JSONObject> listener, Response.ErrorListener errorListener) {
 
         JsonObjectRequest objRequest = new JsonObjectRequest(Request.Method.PUT, contructUrl(method), jsonRequest, listener, errorListener);
         requestQueue.add(objRequest);
     }
 
     public void post(String method, JSONObject jsonRequest,
-                     Response.Listener<JSONObject> listener, Response.ErrorListener errorListener){
+                     Response.Listener<JSONObject> listener, Response.ErrorListener errorListener) {
 
         JsonObjectRequest objRequest = new JsonObjectRequest(Request.Method.POST, contructUrl(method), jsonRequest, listener, errorListener);
         requestQueue.add(objRequest);
     }
 
     public void delete(String method, JSONObject jsonRequest,
-                       Response.Listener<JSONObject> listener, Response.ErrorListener errorListener){
+                       Response.Listener<JSONObject> listener, Response.ErrorListener errorListener) {
 
         JsonObjectRequest objRequest = new JsonObjectRequest(Request.Method.DELETE, contructUrl(method), jsonRequest, listener, errorListener);
         requestQueue.add(objRequest);
