@@ -2,7 +2,9 @@ package com.example.bp3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,10 +25,14 @@ public class Evaluatie extends AppCompatActivity implements Response.Listener<JS
 
     }
 
+    public void gaNaarMenu(View view) {
+        Intent intentMenu = new Intent(this, Menuscherm.class);
+        startActivity(intentMenu);
+    }
+
     public void antwoordSturen(View view){
         EditText etAntwoord = findViewById(R.id.etAntwoord);
         Button btnSubmit = findViewById(R.id.btnSubmit);
-        etAntwoord.setText("");
         String studentnummer = "1234567";
         String antwoord = String.valueOf(etAntwoord.getText());
         insertEvaluatie(antwoord, studentnummer);
@@ -48,4 +54,5 @@ public class Evaluatie extends AppCompatActivity implements Response.Listener<JS
 
         }
 
-    }
+
+}

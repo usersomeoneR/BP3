@@ -25,4 +25,9 @@ public class Menuscherm extends AppCompatActivity {
         Intent intentFilmpje = new Intent(this, filmpje.class);
         startActivity(intentFilmpje);
     }
+
+    public void gaEvaluatie(View view) {
+        Intent intentEvaluatie = new Intent(this, Evaluatie.class);
+        startActivity(intentEvaluatie);
+    }
 }
