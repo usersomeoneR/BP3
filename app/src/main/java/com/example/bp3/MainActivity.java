@@ -49,6 +49,11 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,  System.currentTimeMillis(),
                 1000 * 60 * 60 * 24, pendingIntent);
 
+
+        /*public void naarEvaluatie(){
+            Intent intent = new Intent(this, Evaluatie.class);
+            startActivity(intent);
+        }*/
     }
 
     //Ga naar het hoofdmenu zodra deze methode afgevuurd wordt.
