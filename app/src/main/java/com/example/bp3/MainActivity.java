@@ -47,10 +47,17 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,  System.currentTimeMillis(),
                 1000 * 60 * 60 * 24, pendingIntent);
 
+        //Ga naar filmpje
+        naarFilmpje();
     }
     public void naarMenu(View v) {
-        Intent intent = new Intent(this, Menuscherm.class);
-        startActivity(intent);
+        Intent intentMenu = new Intent(this, Menuscherm.class);
+        startActivity(intentMenu);
+    }
+
+    public void naarFilmpje() {
+        Intent intentFilmpje = new Intent(this, filmpje.class);
+        startActivity(intentFilmpje);
     }
 
     @Override
