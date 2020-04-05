@@ -2,7 +2,9 @@ package com.example.bp3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
@@ -32,6 +34,11 @@ public class filmpje extends AppCompatActivity implements Response.Listener<JSON
         volleyhelper.get("Filmpje.php?beschrijving=" + beschrijving, null, this, this);
 
 
+    }
+
+    public void naarMenu(View view) {
+        Intent intentMenu = new Intent(this, Menuscherm.class);
+        startActivity(intentMenu);
     }
 
     @Override
@@ -85,4 +92,6 @@ public class filmpje extends AppCompatActivity implements Response.Listener<JSON
             e.printStackTrace();
         }    
     }
+
+
 }

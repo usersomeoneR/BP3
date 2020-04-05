@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
         volleyhelper = new VolleyHelper(getBaseContext(), "https://adaonboarding.ml/t1/");
         volleyhelper.get("Studentgegevens.php?studentnummer=" + studentnummer, null, this, this);
 
+        //Maak een intent naar MyReceiver
+        //De MyReceiver vuurt af zodra er een broadcast gemaakt wordt.
         Intent notifyIntent = new Intent(this,MyReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast
                 (this, 1, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT);
@@ -47,17 +49,12 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,  System.currentTimeMillis(),
                 1000 * 60 * 60 * 24, pendingIntent);
 
-        //Ga naar filmpje
-        naarFilmpje();
     }
+
+    //Ga naar het hoofdmenu zodra deze methode afgevuurd wordt.
     public void naarMenu(View v) {
         Intent intentMenu = new Intent(this, Menuscherm.class);
         startActivity(intentMenu);
-    }
-
-    public void naarFilmpje() {
-        Intent intentFilmpje = new Intent(this, filmpje.class);
-        startActivity(intentFilmpje);
     }
 
     @Override
