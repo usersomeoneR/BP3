@@ -34,8 +34,8 @@ public class Studentgegevens extends AppCompatActivity implements Response.Liste
 
     //Zodra er op de knop btnStudentgegevens gedrukt wordt, vuurt deze functie en wordt de gebruiker gestuurd naar het menuscherm.
     public void teruguitSG(View view) {
-        //Intent intentTerugNaarMenu = new Intent(this, Menuscherm.class);
-        //startActivity(intentTerugNaarMenu);
+        Intent intentTerugNaarMenu = new Intent(this, Menuscherm.class);
+        startActivity(intentTerugNaarMenu);
     }
 
     @Override
