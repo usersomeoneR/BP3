@@ -53,14 +53,14 @@ public class bereikbaarActivity extends AppCompatActivity implements Response.Li
     @Override
     public void onResponse(JSONObject response) {
         TextView TV_view = findViewById(R.id.TV_view);
-        TV_view.setText("Dit zijn de bustijden");
+        TV_view.setText("Dit zijn de bustijden:  \n");
         try {
             JSONArray array = response.getJSONArray("rij");
             for (int i = 0; i < array.length(); i++) {
                 JSONObject rij = array.getJSONObject(i);
                 String busnummer = rij.getString("busnummer");
                 String bustijd = rij.getString("bustijd");
-                TV_view.append(busnummer + " heeft " + bustijd + "\n");
+                TV_view.append(busnummer + " gaat om " + bustijd + "\n");
             }
 
             }
