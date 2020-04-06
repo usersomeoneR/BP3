@@ -1,5 +1,7 @@
 package com.example.bp3;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -24,8 +26,16 @@ public class bereikbaarActivity extends AppCompatActivity implements Response.Li
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bereikbaar);
 
-        Button buttomterug = findViewById(R.id.Terug_BT);
-        
+
+        // hier moet de nieuwe class verwezen worden.
+//        Button buttomterug = findViewById(R.id.Terug_BT);
+//        buttomterug.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startQuiz();
+//            }
+//        });
+
 
 
         String studentnummer = "1234567";
@@ -57,5 +67,10 @@ public class bereikbaarActivity extends AppCompatActivity implements Response.Li
         catch (JSONException e) {
                 e.printStackTrace();
         }
-    }
+
+//        private void startQuiz() {
+//            Intent intent = new Intent(bereikbaarActivity.this, *nieuweclass*.class);
+//            startActivity(intent);
+
+        }
 }
