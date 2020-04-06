@@ -1,6 +1,7 @@
 package com.example.bp3;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.android.volley.Response;
@@ -15,12 +16,17 @@ import org.json.JSONObject;
 public class bereikbaarActivity extends AppCompatActivity implements Response.Listener<JSONObject>, Response.ErrorListener  {
     private VolleyHelper volleyhelper;
     private String studentnummer;
+    private Button buttomterug;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bereikbaar);
+
+        Button buttomterug = findViewById(R.id.Terug_BT);
+        
+
 
         String studentnummer = "1234567";
 
