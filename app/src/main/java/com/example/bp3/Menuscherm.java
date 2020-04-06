@@ -40,4 +40,9 @@ public class Menuscherm extends AppCompatActivity {
         Intent intentIntrodagen = new Intent(this, Introdagen.class);
         startActivity(intentIntrodagen);
     }
+
+    public void startQuiz(View view) {
+        Intent intent = new Intent(this, QuizActivity.class);
+        startActivity(intent);
+    }
 }
