@@ -3,7 +3,9 @@ package com.example.bp3;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -33,7 +35,8 @@ public class Evaluatie extends AppCompatActivity implements Response.Listener<JS
     public void antwoordSturen(View view){
         EditText etAntwoord = findViewById(R.id.etAntwoord);
         Button btnSubmit = findViewById(R.id.btnSubmit);
-        String studentnummer = "1234567";
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String studentnummer = preferences.getString("studentnummer", "");
         String antwoord = String.valueOf(etAntwoord.getText());
         insertEvaluatie(antwoord, studentnummer);
 

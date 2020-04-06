@@ -3,7 +3,9 @@ package com.example.bp3;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -24,7 +26,8 @@ public class filmpje extends AppCompatActivity implements Response.Listener<JSON
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filmpje);
-        String studentnummer = "1234567";
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String studentnummer = preferences.getString("studentnummer", "");
         String url = "";
         String beschrijving = "";
 

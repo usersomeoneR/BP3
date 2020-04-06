@@ -3,8 +3,10 @@ package com.example.bp3;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.nfc.Tag;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -115,11 +117,13 @@ public class QuizActivity extends Activity implements Response.Listener<JSONObje
 
         public void insertData(String radio6, String radio5,String radio4,String radio3,String radio2){
             volleyhelper = new VolleyHelper(getBaseContext(), "https://adaonboarding.ml/t1/");
-            volleyhelper.get("insertQuizAntwoord.php?studentnummer=1234567&antwoord="+radio6, null, this, this);
-            volleyhelper.get("insertQuizAntwoord.php?studentnummer=1234567&antwoord="+radio5, null, this, this);
-            volleyhelper.get("insertQuizAntwoord.php?studentnummer=1234567&antwoord="+radio4, null, this, this);
-            volleyhelper.get("insertQuizAntwoord.php?studentnummer=1234567&antwoord="+radio3, null, this, this);
-            volleyhelper.get("insertQuizAntwoord.php?studentnummer=1234567&antwoord="+radio2, null, this, this);
+            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+            String studentnummer = preferences.getString("studentnummer", "");
+            volleyhelper.get("insertQuizAntwoord.php?studentnummer="+ studentnummer +"&antwoord="+radio6, null, this, this);
+            volleyhelper.get("insertQuizAntwoord.php?studentnummer="+ studentnummer +"&antwoord="+radio5, null, this, this);
+            volleyhelper.get("insertQuizAntwoord.php?studentnummer="+ studentnummer +"&antwoord="+radio4, null, this, this);
+            volleyhelper.get("insertQuizAntwoord.php?studentnummer="+ studentnummer +"&antwoord="+radio3, null, this, this);
+            volleyhelper.get("insertQuizAntwoord.php?studentnummer="+ studentnummer +"&antwoord="+radio2, null, this, this);
 
 
         }
