@@ -50,4 +50,9 @@ public class Menuscherm extends AppCompatActivity {
         Intent intentFAQ = new Intent(this, FAQ.class);
         startActivity(intentFAQ);
     }
+
+    public void gaNaarbereikbaarActivity(View view) {
+        Intent intentBereikbaar = new Intent(this, bereikbaarActivity.class);
+        startActivity(intentBereikbaar);
+    }
 }
