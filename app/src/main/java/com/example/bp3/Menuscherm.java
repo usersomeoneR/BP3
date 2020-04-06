@@ -30,4 +30,10 @@ public class Menuscherm extends AppCompatActivity {
         Intent intentEvaluatie = new Intent(this, Evaluatie.class);
         startActivity(intentEvaluatie);
     }
+
+    public void naarContact(View view) {
+        Intent intentContact = new Intent(this, contact.class);
+        startActivity(intentContact);
+    }
+
 }

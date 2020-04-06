@@ -50,6 +50,7 @@
         android:layout_width="182dp"
         android:layout_height="53dp"
         android:text="De aanspreekpunten"
+        android:onClick="naarContact"
         android:fontFamily="FrutigerLTStd-black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

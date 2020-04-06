@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".contact"></activity>
         <activity android:name=".Menuscherm"></activity>
         <activity android:name=".Studentgegevens"></activity>
         <activity android:name=".filmpje"></activity>
