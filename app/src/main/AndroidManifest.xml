@@ -16,6 +16,7 @@
         <activity android:name=".filmpje"/>
         <activity android:name=".Evaluatie"/>
         <activity android:name=".Introdagen"/>
+        <activity android:name=".bereikbaarActivity"/>
         <activity android:name=".FAQ"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
