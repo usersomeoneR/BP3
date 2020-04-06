@@ -2,6 +2,7 @@ package com.example.bp3;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
@@ -35,6 +36,13 @@ public class QuizActivity extends Activity implements Response.Listener<JSONObje
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
+        Button buttomterug = findViewById(R.id.terugBT);
+        buttomterug.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startQuiz();
+            }
+        });
         addListenerOnButton();
     }
 
@@ -115,6 +123,12 @@ public class QuizActivity extends Activity implements Response.Listener<JSONObje
 
 
         }
+
+    private void startQuiz() {
+        Intent intent = new Intent(QuizActivity.this, MainActivity.class);
+        startActivity(intent);
+
+    }
 
     @Override
     public void onErrorResponse(VolleyError error) {
