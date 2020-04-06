@@ -36,4 +36,8 @@ public class Menuscherm extends AppCompatActivity {
         startActivity(intentContact);
     }
 
+    public void ganaarIntrodagen(View view) {
+        Intent intentIntrodagen = new Intent(this, Introdagen.class);
+        startActivity(intentIntrodagen);
+    }
 }

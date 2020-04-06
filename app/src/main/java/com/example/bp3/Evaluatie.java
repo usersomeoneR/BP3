@@ -26,8 +26,8 @@ public class Evaluatie extends AppCompatActivity implements Response.Listener<JS
     }
 
     public void gaNaarMenu(View view) {
-        Intent intentMenu = new Intent(this, Menuscherm.class);
-        startActivity(intentMenu);
+        Intent intentGaMenu = new Intent(this, Menuscherm.class);
+        startActivity(intentGaMenu);
     }
 
     public void antwoordSturen(View view){

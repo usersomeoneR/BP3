@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
 
     //Ga naar het hoofdmenu zodra deze methode afgevuurd wordt.
     public void naarMenu(View v) {
-        Intent intentMenu = new Intent(this, Menuscherm.class);
-        startActivity(intentMenu);
+        Intent intentNaarrMenu = new Intent(this, Menuscherm.class);
+        startActivity(intentNaarrMenu);
     }
 
     @Override

@@ -8,14 +8,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
-        <activity android:name=".contact"></activity>
-        <activity android:name=".Menuscherm"></activity>
-        <activity android:name=".Studentgegevens"></activity>
-        <activity android:name=".filmpje"></activity>
-        <activity android:name=".Evaluatie"></activity>
-        <activity android:name=".Introdagen"></activity>
+        android:theme="@style/AppTheme">
+        <activity android:name=".contact"/>
+        <activity android:name=".Menuscherm"/>
+        <activity android:name=".Studentgegevens"/>
+        <activity android:name=".filmpje"/>
+        <activity android:name=".Evaluatie"/>
+        <activity android:name=".Introdagen"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -37,8 +37,8 @@ public class filmpje extends AppCompatActivity implements Response.Listener<JSON
     }
 
     public void naarMenu(View view) {
-        Intent intentMenu = new Intent(this, Menuscherm.class);
-        startActivity(intentMenu);
+        Intent intentGMenu = new Intent(this, Menuscherm.class);
+        startActivity(intentGMenu);
     }
 
     @Override
