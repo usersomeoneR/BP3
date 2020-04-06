@@ -15,6 +15,7 @@
         <activity android:name=".Studentgegevens"></activity>
         <activity android:name=".filmpje"></activity>
         <activity android:name=".Evaluatie"></activity>
+        <activity android:name=".Introdagen"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
