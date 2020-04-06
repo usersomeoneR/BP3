@@ -45,4 +45,9 @@ public class Menuscherm extends AppCompatActivity {
         Intent intent = new Intent(this, QuizActivity.class);
         startActivity(intent);
     }
+
+    public void gaNaarFAQ(View view) {
+        Intent intentFAQ = new Intent(this, FAQ.class);
+        startActivity(intentFAQ);
+    }
 }
