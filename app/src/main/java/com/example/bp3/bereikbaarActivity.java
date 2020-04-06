@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -32,6 +33,11 @@ public class bereikbaarActivity extends AppCompatActivity implements Response.Li
         volleyhelper = new VolleyHelper(getBaseContext(), "https://adaonboarding.ml/t1/");
                 volleyhelper.get("Bereikbaarheid.php", null, this, this);
 
+    }
+
+    public void gaNaarMenu(View view) {
+        Intent intentGaMenu = new Intent(this, Menuscherm.class);
+        startActivity(intentGaMenu);
     }
 
     @Override
