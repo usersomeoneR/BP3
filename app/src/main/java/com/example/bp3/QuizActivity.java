@@ -50,12 +50,12 @@ public class QuizActivity extends Activity implements Response.Listener<JSONObje
 
     public void addListenerOnButton() {
 
-        radioQuestion2Group = (RadioGroup) findViewById(R.id.radioQuestion2);
-        radioQuestion3Group = (RadioGroup) findViewById(R.id.radioQuestion3);
-        radioQuestion4Group = (RadioGroup) findViewById(R.id.radioQuestion4);
-        radioQuestion5Group = (RadioGroup) findViewById(R.id.radioQuestion5);
-        radioQuestion6Group = (RadioGroup) findViewById(R.id.radioQuestion6);
-        confirmBT = (Button) findViewById(R.id.confirmBT);
+        radioQuestion2Group = findViewById(R.id.radioQuestion2);
+        radioQuestion3Group = findViewById(R.id.radioQuestion3);
+        radioQuestion4Group = findViewById(R.id.radioQuestion4);
+        radioQuestion5Group = findViewById(R.id.radioQuestion5);
+        radioQuestion6Group = findViewById(R.id.radioQuestion6);
+        confirmBT = findViewById(R.id.confirmBT);
 
         confirmBT.setOnClickListener(new OnClickListener() {
             @Override
@@ -68,11 +68,11 @@ public class QuizActivity extends Activity implements Response.Listener<JSONObje
                int selectedId6 = radioQuestion6Group.getCheckedRadioButtonId();
 
 
-                radioQuestion2Buttom = (RadioButton) findViewById(selectedId2);
-                radioQuestion3Buttom = (RadioButton) findViewById(selectedId3);
-                radioQuestion4Buttom = (RadioButton) findViewById(selectedId4);
-                radioQuestion5Buttom = (RadioButton) findViewById(selectedId5);
-                radioQuestion6Buttom = (RadioButton) findViewById(selectedId6);
+                radioQuestion2Buttom = findViewById(selectedId2);
+                radioQuestion3Buttom = findViewById(selectedId3);
+                radioQuestion4Buttom = findViewById(selectedId4);
+                radioQuestion5Buttom = findViewById(selectedId5);
+                radioQuestion6Buttom = findViewById(selectedId6);
 
 //
                 Toast.makeText(QuizActivity.this,

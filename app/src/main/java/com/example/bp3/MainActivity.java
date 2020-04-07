@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
         setContentView(R.layout.activity_main);
         //Moet verandert worden wanneer Applicatie in gebruik komt, alleen hier.
         String studentnummer = "1234567";
-        String stapnu = "0";
         volleyhelper = new VolleyHelper(getBaseContext(), "https://adaonboarding.ml/t1/");
         volleyhelper.get("Studentgegevens.php?studentnummer=" + studentnummer, null, this, this);
         volleyhelper.get("Studentstap.php?studentnummer=" + studentnummer, null, this, this);
