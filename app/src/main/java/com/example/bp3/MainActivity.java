@@ -37,10 +37,12 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Moet verandert worden wanneer Applicatie in gebruik komt, alleen hier.
         String studentnummer = "1234567";
         String stapnu = "0";
         volleyhelper = new VolleyHelper(getBaseContext(), "https://adaonboarding.ml/t1/");
         volleyhelper.get("Studentgegevens.php?studentnummer=" + studentnummer, null, this, this);
+        volleyhelper.get("Studentstap.php?studentnummer=" + studentnummer, null, this, this);
 
 
         //Maak een intent naar MyReceiver
@@ -69,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
     public void onResponse(JSONObject response) {
         TextView tvWelkom = findViewById(R.id.tvWelkom);
         try {
+
             JSONArray array = response.getJSONArray("rij");
             for (int i = 0; i < array.length(); i++){
                 JSONObject rij = array.getJSONObject(i);

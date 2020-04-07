@@ -141,88 +141,104 @@
         android:id="@+id/ivCheck"
         android:layout_width="45dp"
         android:layout_height="190dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="68dp"
         android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.808"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.077"
         app:srcCompat="@drawable/check" />
 
     <ImageView
         android:id="@+id/ivCheck2"
         android:layout_width="45dp"
         android:layout_height="190dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="68dp"
         android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.814"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.201"
         app:srcCompat="@drawable/check" />
 
     <ImageView
         android:id="@+id/ivCheck3"
         android:layout_width="45dp"
         android:layout_height="190dp"
-        android:layout_marginTop="192dp"
-        android:layout_marginEnd="68dp"
         android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.814"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.356"
         app:srcCompat="@drawable/check" />
 
     <ImageView
         android:id="@+id/ivCheck4"
         android:layout_width="45dp"
         android:layout_height="190dp"
-        android:layout_marginTop="268dp"
-        android:layout_marginEnd="68dp"
         android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.814"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.489"
         app:srcCompat="@drawable/check" />
 
     <ImageView
         android:id="@+id/ivCheck5"
         android:layout_width="45dp"
         android:layout_height="190dp"
-        android:layout_marginTop="336dp"
-        android:layout_marginEnd="68dp"
         android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.814"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.609"
         app:srcCompat="@drawable/check" />
 
     <ImageView
         android:id="@+id/ivCheck7"
         android:layout_width="45dp"
         android:layout_height="190dp"
-        android:layout_marginTop="480dp"
-        android:layout_marginEnd="68dp"
         android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.814"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.872"
         app:srcCompat="@drawable/check" />
 
     <ImageView
         android:id="@+id/ivCheck6"
         android:layout_width="45dp"
         android:layout_height="190dp"
-        android:layout_marginTop="404dp"
-        android:layout_marginEnd="68dp"
         android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.808"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.743"
         app:srcCompat="@drawable/check" />
 
     <ImageView
         android:id="@+id/ivCheck8"
         android:layout_width="45dp"
         android:layout_height="190dp"
-        android:layout_marginTop="540dp"
-        android:layout_marginEnd="68dp"
         android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.808"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/check" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

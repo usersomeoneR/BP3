@@ -118,8 +118,7 @@ public class Menuscherm extends AppCompatActivity implements Response.Listener<J
 
 
                 if(stap == 0){
-
-                    btnNaarFilmpje.setEnabled(false);
+                    btnNaarFilmpje.setEnabled(true);
                     btnNaarQuiz.setEnabled(false);
                 }
                 if(stap == 1){
