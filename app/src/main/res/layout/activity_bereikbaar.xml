@@ -50,8 +50,8 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="209dp"
-        android:layout_height="65dp"
+        android:layout_width="221dp"
+        android:layout_height="53dp"
         android:text="Bereikbaarheid"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -40,6 +40,11 @@ public class filmpje extends AppCompatActivity implements Response.Listener<JSON
     }
 
     public void naarMenu(View view) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String studentnummer = preferences.getString("studentnummer", "");
+        String stapnu = "1";
+        volleyhelper = new VolleyHelper(getBaseContext(), "https://adaonboarding.ml/t1/");
+        volleyhelper.get("updateStudentstap.php?studentnummer=" + studentnummer + "&stapnu=" + stapnu, null, this, this);
         Intent intentGMenu = new Intent(this, Menuscherm.class);
         startActivity(intentGMenu);
     }

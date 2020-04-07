@@ -28,6 +28,11 @@ public class Evaluatie extends AppCompatActivity implements Response.Listener<JS
     }
 
     public void gaNaarMenu(View view) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String studentnummer = preferences.getString("studentnummer", "");
+        String stapnu = "8";
+        volleyhelper = new VolleyHelper(getBaseContext(), "https://adaonboarding.ml/t1/");
+        volleyhelper.get("updateStudentstap.php?studentnummer=" + studentnummer + "&stapnu=" + stapnu, null, this, this);
         Intent intentGaMenu = new Intent(this, Menuscherm.class);
         startActivity(intentGaMenu);
     }

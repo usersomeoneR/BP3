@@ -30,10 +30,15 @@ public class Studentgegevens extends AppCompatActivity implements Response.Liste
         volleyhelper = new VolleyHelper(getBaseContext(), "https://adaonboarding.ml/t1/");
         volleyhelper.get("Studentgegevens.php?studentnummer=" + studentnummer, null, this, this);
 
+
     }
 
     //Zodra er op de knop btnStudentgegevens gedrukt wordt, vuurt deze functie en wordt de gebruiker gestuurd naar het menuscherm.
     public void teruguitSG(View view) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String studentnummer = preferences.getString("studentnummer", "");
+        String stapnu = "3";
+        volleyhelper.get("updateStudentstap.php?studentnummer=" + studentnummer + "&stapnu=" + stapnu, null, this, this);
         Intent intentTerugNaarMenuscherm = new Intent(this, Menuscherm.class);
         startActivity(intentTerugNaarMenuscherm);
     }
