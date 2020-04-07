@@ -20,9 +20,7 @@ import org.json.JSONObject;
 
 public class Menuscherm extends AppCompatActivity implements Response.Listener<JSONObject>, Response.ErrorListener{
 
-        private VolleyHelper volleyhelper;
-//        private String studentnummer = "1234567";
-        //private Integer stapnu = 0;
+    private VolleyHelper volleyhelper;
 
 
     @Override
