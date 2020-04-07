@@ -38,13 +38,13 @@ public class QuizActivity extends Activity implements Response.Listener<JSONObje
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-        Button buttomterug = findViewById(R.id.terugBT);
-        buttomterug.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startQuiz();
-            }
-        });
+        //Button buttomterug = findViewById(R.id.terugBT);
+        //buttomterug.setOnClickListener(new View.OnClickListener() {
+           // @Override
+           // public void onClick(View v) {
+               // startQuiz();
+            //}
+        //});
         addListenerOnButton();
     }
 
@@ -125,14 +125,13 @@ public class QuizActivity extends Activity implements Response.Listener<JSONObje
             volleyhelper.get("insertQuizAntwoord.php?studentnummer="+ studentnummer +"&antwoord="+radio3, null, this, this);
             volleyhelper.get("insertQuizAntwoord.php?studentnummer="+ studentnummer +"&antwoord="+radio2, null, this, this);
 
+            String stapnu = "7";
+            volleyhelper.get("updateStudentstap.php?studentnummer=" + studentnummer + "&stapnu=" + stapnu, null, this, this);
+            Intent intentQuiz = new Intent(this, Menuscherm.class);
+            startActivity(intentQuiz);
 
         }
 
-    private void startQuiz() {
-        Intent intentQuiz = new Intent(QuizActivity.this, Menuscherm.class);
-        startActivity(intentQuiz);
-
-    }
 
     @Override
     public void onErrorResponse(VolleyError error) {
@@ -143,4 +142,5 @@ public class QuizActivity extends Activity implements Response.Listener<JSONObje
     public void onResponse(JSONObject response) {
 
     }
+
 }
