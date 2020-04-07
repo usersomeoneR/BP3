@@ -31,15 +31,17 @@ import org.json.JSONObject;
 public class MainActivity extends AppCompatActivity implements Response.Listener<JSONObject>, Response.ErrorListener {
     private VolleyHelper volleyhelper;
     private String studentnummer;
+    private String stapnu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         String studentnummer = "1234567";
-
+        String stapnu = "0";
         volleyhelper = new VolleyHelper(getBaseContext(), "https://adaonboarding.ml/t1/");
         volleyhelper.get("Studentgegevens.php?studentnummer=" + studentnummer, null, this, this);
+
 
         //Maak een intent naar MyReceiver
         //De MyReceiver vuurt af zodra er een broadcast gemaakt wordt.
@@ -90,6 +92,7 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
         catch (JSONException e) {
             e.printStackTrace();
     }
+
 
     }
 }
