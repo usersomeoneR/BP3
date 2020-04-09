@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Studentgegevens">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="443dp"
+        android:layout_height="803dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/studentgegevens" />
+
+    <TextView
+        android:id="@+id/tvNaam"
+        android:layout_width="299dp"
+        android:layout_height="50dp"
+        android:background="#45CDCDCD"
+        android:fontFamily="@font/frutigerltstdlight"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.325" />
+
+    <TextView
+        android:id="@+id/tvSN"
+        android:layout_width="299dp"
+        android:layout_height="52dp"
+        android:background="#45CDCDCD"
+        android:fontFamily="@font/frutigerltstdlight"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.458" />
+
+    <TextView
+        android:id="@+id/lbStudentgegevens"
+        android:layout_width="237dp"
+        android:layout_height="53dp"
+        android:background="#45CDCDCD"
+        android:backgroundTintMode="add"
+        android:fontFamily="@font/frutigerltstdbold"
+        android:gravity="center"
+        android:lineSpacingExtra="8sp"
+        android:text="Studentgegevens"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.126" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="300dp"
+        android:layout_height="57dp"
+        android:background="#45CDCDCD"
+        android:fontFamily="@font/frutigerltstdlight"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <Button
+        android:id="@+id/btnStudentgegevens"
+        android:layout_width="190dp"
+        android:layout_height="66dp"
+        android:fontFamily="@font/frutigerltstdbold"
+        android:gravity="center"
+        android:lineSpacingExtra="8sp"
+        android:onClick="teruguitSG"
+        android:text="Menu"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.888" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
